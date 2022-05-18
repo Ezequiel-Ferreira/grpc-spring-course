@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "com.ezequiel";
+option java_multiple_files = true;
+
+
+package com.ezequiel;
+
+service HelloService {
+  rpc Hello(HelloReq) returns (HelloRes);
+}
+
+message HelloReq {
+  string message = 1;
+}
+
+message HelloRes {
+  int64 id = 1;
+  string message = 2;
+}
